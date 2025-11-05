@@ -4,7 +4,7 @@ services:
     runtime: node
     plan: free
     buildCommand: pnpm install && pnpm run build
-    startCommand: node dist/server/_core/index.js
+    startCommand: bash start.sh
     region: oregon
     envVars:
       - key: NODE_ENV

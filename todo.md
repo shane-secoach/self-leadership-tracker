@@ -32,17 +32,15 @@
 - [ ] Test core user flow (login → log today → view week → edit past entry)
 - [ ] Verify mobile responsiveness
 - [ ] Test edge cases (missing days in week, first-time user, etc.)
+- [ ] Test Daily Check-in form submission and data persistence
+- [ ] Verify Weekly Dashboard calculations are accurate
+- [ ] Test Past Entries browsing and filtering
+- [ ] Test Entry Detail editing functionality
 
 ## Deployment
-- [ ] Save checkpoint before publishing
-- [ ] Prepare project for deployment
+- [x] Save checkpoint before publishing
+- [x] Publish the app
+- [ ] Gather user feedback and iterate
 
 ## Bugs & Issues
-- [ ] OAuth login flow not completing - redirects back to login screen after account selection
-  * Issue: After clicking "Shane Evans" on the Manus OAuth portal, the app redirects back to the login screen instead of completing authentication
-  * Diagnosis: The OAuth callback is being triggered, but the session cookie isn't being recognized by the frontend
-  * Attempted fixes:
-    - Added authentication check to Today page with redirect to login if not authenticated
-    - Added debug logging to OAuth callback and cookie handling
-    - Modified cookie options to use adaptive sameSite based on secure connection
-  * Next steps: Check server logs during OAuth callback to see if cookie is being set correctly, verify JWT token creation, test cookie persistence
+- [x] OAuth login flow - RESOLVED (app needed to be published first)

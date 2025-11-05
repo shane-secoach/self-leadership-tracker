@@ -3,21 +3,31 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { trpc } from "@/lib/trpc";
 import { useLocation } from "wouter";
-import { Loader2, TrendingUp, Zap, AlertCircle } from "lucide-react";
+import { Loader2, TrendingUp, AlertCircle } from "lucide-react";
+import { useAuth } from "@/_core/hooks/useAuth";
+import { getLoginUrl } from "@/const";
 
 export default function Today() {
   const [, navigate] = useLocation();
   const [isLoading, setIsLoading] = useState(true);
+  const { user, loading: authLoading, isAuthenticated } = useAuth();
 
-  const { data: todayCheckIn, isLoading: isFetching } = trpc.checkIn.today.useQuery();
+  const { data: todayCheckIn, isLoading: isFetching } = trpc.checkIn.today.useQuery(undefined, {
+    enabled: isAuthenticated,
+  });
 
   useEffect(() => {
-    if (!isFetching) {
-      setIsLoading(false);
+    if (!authLoading) {
+      if (!isAuthenticated) {
+        // Redirect to login if not authenticated
+        window.location.href = getLoginUrl();
+      } else {
+        setIsLoading(false);
+      }
     }
-  }, [isFetching]);
+  }, [authLoading, isAuthenticated]);
 
-  if (isLoading) {
+  if (authLoading || isLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white flex items-center justify-center">
         <Loader2 className="w-8 h-8 animate-spin text-indigo-600" />

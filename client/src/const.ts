@@ -13,6 +13,13 @@ export const getLoginUrl = () => {
   const redirectUri = `${window.location.origin}/api/oauth/callback`;
   const state = btoa(redirectUri);
 
+  console.log('[OAuth] Login URL generated:', {
+    appId,
+    redirectUri,
+    oauthPortalUrl,
+    state: state.substring(0, 20) + '...',
+  });
+
   const url = new URL(`${oauthPortalUrl}/app-auth`);
   url.searchParams.set("appId", appId);
   url.searchParams.set("redirectUri", redirectUri);

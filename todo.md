@@ -36,3 +36,13 @@
 ## Deployment
 - [ ] Save checkpoint before publishing
 - [ ] Prepare project for deployment
+
+## Bugs & Issues
+- [ ] OAuth login flow not completing - redirects back to login screen after account selection
+  * Issue: After clicking "Shane Evans" on the Manus OAuth portal, the app redirects back to the login screen instead of completing authentication
+  * Diagnosis: The OAuth callback is being triggered, but the session cookie isn't being recognized by the frontend
+  * Attempted fixes:
+    - Added authentication check to Today page with redirect to login if not authenticated
+    - Added debug logging to OAuth callback and cookie handling
+    - Modified cookie options to use adaptive sameSite based on secure connection
+  * Next steps: Check server logs during OAuth callback to see if cookie is being set correctly, verify JWT token creation, test cookie persistence

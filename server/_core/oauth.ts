@@ -14,7 +14,14 @@ export function registerOAuthRoutes(app: Express) {
     const code = getQueryParam(req, "code");
     const state = getQueryParam(req, "state");
 
+    console.log('[OAuth] Callback received:', {
+      code: code ? code.substring(0, 10) + '...' : 'missing',
+      state: state ? state.substring(0, 20) + '...' : 'missing',
+      url: req.url,
+    });
+
     if (!code || !state) {
+      console.error('[OAuth] Missing code or state');
       res.status(400).json({ error: "code and state are required" });
       return;
     }

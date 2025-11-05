@@ -25,4 +25,26 @@ export const users = mysqlTable("users", {
 export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
 
-// TODO: Add your tables here
+export const dailyCheckIns = mysqlTable(
+  "dailyCheckIns",
+  {
+    id: int("id").autoincrement().primaryKey(),
+    userId: int("userId").notNull(),
+    date: varchar("date", { length: 10 }).notNull(), // YYYY-MM-DD format
+    moodScore: int("moodScore").notNull(), // 1-10
+    energyScore: int("energyScore").notNull(), // 1-10
+    stressScore: int("stressScore").notNull(), // 1-10
+    pillarSelfAwareness: int("pillarSelfAwareness").notNull(), // 1-5
+    pillarMindset: int("pillarMindset").notNull(), // 1-5
+    pillarAction: int("pillarAction").notNull(), // 1-5
+    pillarImpact: int("pillarImpact").notNull(), // 1-5
+    keyWin: varchar("keyWin", { length: 200 }),
+    biggestChallenge: varchar("biggestChallenge", { length: 200 }),
+    penMoment: varchar("penMoment", { length: 200 }),
+    createdAt: timestamp("createdAt").defaultNow().notNull(),
+    updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+  }
+);
+
+export type DailyCheckIn = typeof dailyCheckIns.$inferSelect;
+export type InsertDailyCheckIn = typeof dailyCheckIns.$inferInsert;

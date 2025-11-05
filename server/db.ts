@@ -1,6 +1,6 @@
-import { eq } from "drizzle-orm";
+import { and, eq, gte, lte } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users } from "../drizzle/schema";
+import { InsertUser, users, dailyCheckIns, InsertDailyCheckIn } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -89,4 +89,71 @@ export async function getUserByOpenId(openId: string) {
   return result.length > 0 ? result[0] : undefined;
 }
 
-// TODO: add feature queries here as your schema grows.
+export async function getDailyCheckIn(userId: number, date: string) {
+  const db = await getDb();
+  if (!db) return undefined;
+  const result = await db
+    .select()
+    .from(dailyCheckIns)
+    .where(and(eq(dailyCheckIns.userId, userId), eq(dailyCheckIns.date, date)))
+    .limit(1);
+  return result.length > 0 ? result[0] : undefined;
+}
+
+export async function createOrUpdateCheckIn(
+  userId: number,
+  date: string,
+  data: Omit<InsertDailyCheckIn, 'userId' | 'date'>
+) {
+  const db = await getDb();
+  if (!db) throw new Error('Database not available');
+  
+  const existing = await getDailyCheckIn(userId, date);
+  
+  if (existing) {
+    await db
+      .update(dailyCheckIns)
+      .set({ ...data, updatedAt: new Date() })
+      .where(and(eq(dailyCheckIns.userId, userId), eq(dailyCheckIns.date, date)));
+    return getDailyCheckIn(userId, date);
+  } else {
+    await db.insert(dailyCheckIns).values({
+      userId,
+      date,
+      ...data,
+    });
+    return getDailyCheckIn(userId, date);
+  }
+}
+
+export async function getCheckInsForWeek(userId: number, startDate: string, endDate: string) {
+  const db = await getDb();
+  if (!db) return [];
+  return db
+    .select()
+    .from(dailyCheckIns)
+    .where(
+      and(
+        eq(dailyCheckIns.userId, userId),
+        gte(dailyCheckIns.date, startDate),
+        lte(dailyCheckIns.date, endDate)
+      )
+    )
+    .orderBy(dailyCheckIns.date);
+}
+
+export async function getCheckInsForMonth(userId: number, year: number, month: number) {
+  const db = await getDb();
+  if (!db) return [];
+  const startDate = `${year}-${String(month).padStart(2, '0')}-01`;
+  const endDate = new Date(year, month, 0).toISOString().split('T')[0];
+  return getCheckInsForWeek(userId, startDate, endDate);
+}
+
+export async function deleteCheckIn(userId: number, date: string) {
+  const db = await getDb();
+  if (!db) throw new Error('Database not available');
+  await db
+    .delete(dailyCheckIns)
+    .where(and(eq(dailyCheckIns.userId, userId), eq(dailyCheckIns.date, date)));
+}

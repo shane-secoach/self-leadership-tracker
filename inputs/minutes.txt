@@ -1,7 +1,349 @@
-Paste your latest session minutes here.
+## The "Busy" Rebrand
 
-Tip for Quill PDF exports:
-- Open the PDF in Quill.
-- Copy all text from the PDF.
-- Paste the raw text into this file.
-- Do not clean it first; the prompt is written to handle messy formatting.
+* LinkedIn post by Shane Evans regarding the "busy" trap
+* L&D Project: Major learning and development initiative with a large organization  
+   * Issue: Low attendance/no-shows for sessions cited as being "too busy"
+* Language Pivot: Replacing the word "busy" with "haven't prioritized"
+* **Agreement:** Shane Evans and the client organization agreed to ban the word "busy" in project communications to drive accountability.
+
+#### 3m
+
+## The "Busy" Reframe
+
+* Shift from saying "I'm busy" to "I haven't prioritised it"  
+   * Aims to restore a sense of control and agency over time
+* "Busy" as the "new fine": A social badge of honor used to avoid downtime
+* **Agreement:** Shane and Speaker 1 will eliminate the word "busy" from their vocabulary in favor of prioritization language
+
+## CRM and Lead Management
+
+* Speaker 1 status: Developing numerous leads across various potential projects
+* Requirement: A system to track client stages, follow-ups, and "next steps"
+* Desired Features:  
+   * Integration of AI for setup and management  
+   * A visual Dashboard for oversight
+* Technical Terminology: Defined as a CRM (Client Relationship Manager)
+* References: Mention of a previous tool/system developed by "Ash" (unclear details)
+* **Agreement:** Shane to transition into "pure coaching" mode to extract Speaker 1's existing ideas for the system structure
+
+#### 5m
+
+## CRM Reverse Engineering
+
+* Goal: Move away from static Word tables toward an integrated tracking system.
+* Initial Data Requirements:  
+   * Name and Contact Details (Primary: Email and WhatsApp/Phone).  
+   * Conversation history.  
+   * Suggested next steps/actions.
+* Project Categorization: Work types are currently "completely different" and lack uniform structure.
+* **Agreement:** Start by defining high-level "chunks" (disciplines) of information to build specific AI prompts for a custom dashboard.
+
+## Information Chunking Strategy
+
+* Method: "Reverse engineering" the CRM by identifying broad categories before specific details.
+* Analogy: Categorizing "Vehicles" as a high-level chunk before drilling down into specific types.
+* Objective: Create a hierarchy of data to allow for more specific and effective AI-generated tools.
+
+#### 8m
+
+## Categorization & Dashboarding
+
+* Shane proposes "Chunking" data to organize work streams  
+   * Top Level: Methods of Transport (Global view)  
+   * Mid Level: Vehicles (Work categories)  
+   * Low Level: Specifics (Red car/Blue car)
+* Visualizing a Business Dashboard  
+   * Metrics: Tracking lead volume per category (e.g., 6 in CRM, 10 in social media)  
+   * Purpose: Identifying high-growth areas vs. low-priority tasks over time
+* **Agreement:** Implementation of a dashboard to monitor lead volume across TV, Social Media, and Speaking engagements
+
+## Work Streams & Pipeline
+
+* Social Media / Brand Partnerships  
+   * Current status: Multiple meetings completed; advanced stage compared to other pillars
+* Corporate Social Value Packages  
+   * Partnership: Collaboration with a friend to create deliverables for company "social value" proof
+* High-End Art & AI  
+   * Project: AI-focused talk/initiative  
+   * Status: Requires significant attention/effort to gain momentum
+* Sustainability Portfolio  
+   * Contact: Linith (via AI-generated brief)  
+   * Objective: Collaborative work with a "sustainability guy" to build out portfolio
+* TV & Film  
+   * Status: Multiple projects currently in progress/moving along
+
+#### 10m
+
+## Project Categorization & Workflow
+
+* Identification of 5 core work "chunks":  
+   * Arts, Social Media, Social Value, TV/Film, and Training/Editing.
+* Training priorities:  
+   * Practical application with "bigger and better" camera gear.  
+   * Software mastery: Learning new editing techniques.
+* Current organizational friction:  
+   * Utilizing a physical whiteboard; client feels it lacks necessary "pings" or urgency.  
+   * **Agreement:** Information needs to be segmented into a dashboard to prevent data overwhelm.
+
+## System Requirements & CRM Development
+
+* Dashboard Data Fields:  
+   * Name, Email, WhatsApp, Work Type (e.g., Editing), Project Scope (e.g., 1hr presentation to TV documentary), and "Next Contact" notes.
+* Functional needs:  
+   * High-level "at a glance" visual status for momentum tracking.  
+   * Deep-dive CRM (Client Relationship Management) for granular project work.
+* Technical Environment:  
+   * Current stack is fragmented/unclear; user has access to Microsoft and Google packages but lacks a defined system.
+
+#### 13m
+
+## CRM Strategy & Tooling
+
+* Current Software Inventory:  
+   * Speaker 1 uses Google Workspace (Gmail) but performs primary work in Microsoft Word.  
+   * Confirmed access to Microsoft Excel.
+* CRM Recommendations:  
+   * Excel is the designated starting point for low-volume client management.  
+   * SharePoint or SharePoint Lists suggested as the next tier of complexity.  
+   * Bespoke systems only required at scale (e.g., £2M+ annual turnover or 100+ clients).
+* **Agreement:** Start with a simple, manual process/spreadsheet to maintain daily consistency.
+
+## Spreadsheet Architecture
+
+* Essential Data Columns:  
+   * Client Name.  
+   * Contact Details (Email and WhatsApp).  
+   * Types of Work.  
+   * Deep-dive details/Notes.  
+   * Next Contact/Delivery Date.
+* AI Integration:  
+   * Speaker 1 currently uses ChatGPT.  
+   * **Agreement:** Utilize ChatGPT to assist in building out the initial CRM framework/columns.
+
+#### 16m
+
+## AI-Powered CRM Development
+
+* Tooling: Comparison between **ChatGPT** and **Claude** to determine output quality.
+* Prompt Specs: Build an **Excel-based CRM** with specific data requirements:  
+   * Integrated drop-down menus for "Type of Work."  
+   * Automated formulas for ease of use.  
+   * Future-state requirement: Data-driven dashboard.
+* Objective: Streamline contact management and delivery tracking.
+
+## Tax Compliance & Financial Tracking
+
+* Status: Tax return submitted days before deadline.
+* Financials:  
+   * No payment due currently due to high payments on account in previous year.  
+   * Potential refund anticipated for 2025/26 tax year.
+* Deductions: Training expenses and photography equipment.
+* **Agreement:** Shift bookkeeping habits to record expenses immediately via Excel/digital form rather than waiting for deadlines.
+
+#### 19m
+
+## Expense Tracking & AI Assistance
+
+* Ali began recording expenses manually for the first time using equipment purchases as a starting point.
+* Shane used AI to generate an Excel file with formulas, validation, and example data (e.g., "John Smith").
+* File transfer initiated via Teams chat to allow Ali to download and save locally.
+* **Agreement:** Shane shared the file link with Ali to enable collaborative editing and local storage.
+
+## CRM Utility & Functional Specs
+
+* AI-generated CRM features:  
+   * Dashboard: Currently raw numbers; potential for future graphs/charts.  
+   * Data Fields: Name, WhatsApp number, Work type (drop-down), Project notes, Source (Networking/Event), and Next Contact.
+* CRM Purpose: Centralized repository for client interaction history, action points, and shared team access.
+* Analogy: Call center systems where sales and service teams input specific customer interaction logs.
+
+#### 23m
+
+## CRM Fundamentals & Data Management
+
+* CRM utility: Centralizes customer info (CRM/Sales/Service inputs) to avoid fragmented data.
+* "Actionable Points": Systems track next steps to ensure momentum with individual leads.
+* Glenith (Contact): Example of workflow—referral to "social value guy" requires a meeting "next stage."
+* The "Head" Method: Common pitfall where contacts from Email, WhatsApp, and Social Media are tracked mentally rather than logged.
+* Spreadsheet solution: Serves as a manual backup to track when to "drop a ring" or send reminders.
+
+## Shane’s Workflow & Personal Systems
+
+* Current System: Shane admits most tracking is "in my head" or via a sporadic Excel spreadsheet.
+* "Ping" Strategy: Shane relies on spontaneous messaging; often results in reactive new work/leads.
+* The "Sketchy Head" Risk: Speaker 1 expresses concern over "dropping balls" while transitioning from project execution to business development.
+* Operational Gap: High discipline required daily to convert task lists into actual CRM updates.
+
+#### 25m
+
+## Lead Pipeline Management
+
+* Challenges with "sketchy head" and project tunnel vision  
+   * Risk of "dropping balls" when transitioning from delivery back to sales  
+   * Gap in workload: 1-3 month projects lead to "What's next?" panic upon completion
+* Strategic lead time: Shane recommends reaching out to prospects 4–8 weeks in advance
+* Two-step CRM approach:  
+   * Step 1: Consolidate all data in one location  
+   * Step 2: Utilize dashboards/automation for visualization
+
+## Spreadsheet Troubleshooting & Formatting
+
+* Technical issues: File transfer failed in meeting chat; Shane sent via email instead
+* Spreadsheet structure:  
+   * Contact ID: Uses automated formulas (e.g., 0001)  
+   * Dashboard tab: Designed for high-level data overview
+* **Agreement:** Shane to explain the automated formula logic and how the contact list populates
+
+#### 28m
+
+## CRM Data Structure & Validation
+
+* Contact ID (0001): Automated via formula to ensure unique tracking.
+* Preferred Channel & Social Media: Utilizes drop-down lists rather than manual text entry.  
+   * Prevents data fragmentation (e.g., "WhatsApp" vs. "What's up").  
+   * Essential for accurate dashboarding and filtering.
+* Data Entry Standards:  
+   * Manual entry: Name (Alex Example), Email, and More Detail.  
+   * Automation potential: Next Contact Date currently manual but open to formula integration.
+* **Agreement:** Use drop-down lists to force standardized inputs for consistent reporting.
+
+## Formatting & Future Automation
+
+* Conditional Formatting: Proposed to visually differentiate statuses or categories via color coding.
+* Status Tracking: Identified as a drop-down list to maintain pipeline integrity.
+* Formula Exploration: Audit of all columns conducted to identify which fields remain manual versus automated.
+
+#### 31m
+
+## Excel Automation via ChatGPT
+
+* **Objective:** Automate "Next Contact Date" column to flag follow-ups.
+* **Formula Logic:** Add 30 days to the "Last Contact Date" to trigger visual alerts (e.g., turning the cell red).
+* **ChatGPT Workflow:**  
+   * Copy column title: `next contact date manual`.  
+   * Prompt used: "Give me a formula for this column so it gives me a date in 30 days."
+* **Implementation Steps:**  
+   * Paste formula into cell below header.  
+   * Drag-and-drop the fill handle (bottom right cross) to apply to the entire column.
+* **Formula Refinement:**  
+   * Initial formula used `TODAY()` and calculated 30 working days (Mon-Fri).  
+   * **Agreement:** Manual override to reference specific cell data.  
+   * Change `TODAY()` to cell reference `K2` to link the 30-day increment specifically to the last contact date.
+
+#### 34m
+
+## Excel Formula Troubleshooting
+
+* Column K: Identified as the "Last Contact Date" reference for the formula
+* Objective: Calculate 32 working days based on Column K
+* Formula Refinement:  
+   * Initial attempt using cell **K2** resulted in a #REF! error  
+   * Identified data is formatted as an **Excel Table**, requiring structured references rather than standard cell IDs  
+   * **Agreement:** Use the "Excel table version" of the code provided by AI to handle structured headers
+* Troubleshooting Steps:  
+   * Copy "Last Contact Date" header into AI chat to re-map the formula  
+   * **Agreement:** Take a screenshot of the current Excel error warning to feed back into the chat for precise debugging  
+   * Shane to guide the user through capturing the screen on their laptop
+
+#### 38m
+
+## Excel Troubleshooting & Formula Correction
+
+* Excel Cell Referencing  
+   * Speaker 1 mistakenly pasted a formula into the Name Box instead of cell **L2/L3**  
+   * Initial error involved a "table reference" versus "normal range" formula  
+   * Shane directed Speaker 1 to use the "normal range" formula from the chat log
+* Data Entry & Formatting  
+   * **26 2026 / 0201**: Specific date strings identified for correction  
+   * Manual entry of new test date: **6/8/8/8** (placeholder) and **04**  
+   * **Agreement:** Shane and Speaker 1 agreed to use **Format Cells > Date/Custom** to standardize the display of the "Last Contact Date" column
+
+## Dynamic Column Behavior
+
+* Formula Validation  
+   * Successfully used **Control + V** to paste the corrected `IF` statement  
+   * Drag-and-drop applied to the column to "blank out" irrelevant cells  
+   * Confirmation that the `IF` formula correctly handles empty or future dates
+
+#### 41m
+
+## Excel Formatting Support
+
+* Formatting "Next Contact Date" columns  
+   * Resolution for date/month display issues via custom cell types  
+   * Correction of "Auto-fill" error using **Ctrl + Z** to undo accidental date increments
+* **Format Painter** utility  
+   * Tool used to copy cell formatting without changing data values  
+   * Process: Select source cell > Click Paintbrush icon > Drag over target cells
+* **Agreement:** Ali to apply formatting changes across the remaining document rows
+
+## AI Integration for Workflow
+
+* Leveraging AI for step-by-step technical guidance
+* **Conditional Formatting** objective:  
+   * Goal: Automatically turn cells **Red** if "Next Contact Date" is within the next **7 days**
+* **Agreement:** Use ChatGPT to generate specific instructions for the conditional formatting rules
+* Training Milestone: 6 minutes remaining in the session
+* **Agreement:** Ali to continue weekly AI training to maintain proficiency
+
+#### 45m
+
+## Excel Conditional Formatting Workflow
+
+* **Task:** Setting up automated date-based formatting for "Next Contact" data.
+* **Workflow Steps:**  
+   * Select first data cell (excluding header) in the target column.  
+   * Action: `Control` \+ `Shift` \+ `Down Arrow` to highlight the entire range.  
+   * Navigation: **Home Tab** \> **Conditional Formatting** \> **New Rule**.  
+   * Rule Type: Select "Use a formula to determine which cells to format."
+* **Formula Implementation:**  
+   * **Agreement:** Copied specific code/formula from Chat history into the "Format values where this formula is true" box.  
+   * Target: Highlight cells occurring within the **next 7 days**.
+* **Verification:**  
+   * Initial check showed no highlighted cells because no dates fell within the upcoming week.  
+   * **Agreement:** Manually change a date in the last column to a current date to test if the formatting triggers correctly.
+
+#### 47m
+
+## Spreadsheet Formula & Date Correction
+
+* **Ali** manually overtyped formulas in columns **K** and **L** (Row 3).
+* Date corrections discussed:  
+   * Last contact date: \~3 months ago.  
+   * Suggested next contact: **Feb 6th** or **Feb 10th**.  
+   * Current entry of **Feb 14th** noted as outside the 7-day window.
+* Cell **L3** formula restoration:  
+   * Use **Ctrl+C** on the cell above (**L2**) and **Ctrl+V** to paste.  
+   * Alternative: Click and drag the formula down to restore logic.
+* **Agreement:** Ali to go back through the sheet and re-apply formulas until the tracking works correctly.
+
+## Cell Referencing & Formatting
+
+* Key cell identifier: **K3** (Column K, Row 3).
+* Logic check: Formula allows for automatic "Next Contact Date" calculation based on "Last Contact."
+* Formatting Note: Format Painter will not restore deleted formulas, only visual styles.
+* **Agreement:** Shane to end call for another appointment; Ali to continue manual data cleanup.
+
+#### 50m
+
+## CRM Optimization & AI Management
+
+* Move beyond Word text boxes to Excel for data management.
+* CRM Maintenance Habits:  
+   * Schedule 30-minute weekly diary gaps for updates.  
+   * Focus on entering all contact details "religiously" before adding advanced features.
+* AI Project Organization:  
+   * Create a dedicated "CRM Project" within the paid AI tool.  
+   * **Agreement:** Ali to right-click current chat and "Add to Project" to preserve context for future graphs/builds.
+
+## Branding & Future Training
+
+* **Agreement:** Ali to post on LinkedIn regarding the coaching session and the CRM build.
+* Career Development:  
+   * **Agreement:** Ali to attend an upcoming "bootcamp" to mitigate potential negative AI impacts on job roles.
+* Social Networking:  
+   * **Agreement:** Shane and Ali to attend a future social event together.
+
+#### 54m
+
+  

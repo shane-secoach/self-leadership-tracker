@@ -1,0 +1,7 @@
+Paste your latest session minutes here.
+
+Tip for Quill PDF exports:
+- Open the PDF in Quill.
+- Copy all text from the PDF.
+- Paste the raw text into this file.
+- Do not clean it first; the prompt is written to handle messy formatting.
